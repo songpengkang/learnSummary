@@ -13,23 +13,22 @@
         html,body{
             height:100%;
         }
-        div{
-            width: 100%;
-            height: 100%;
+        div + P{
             background-color: #0effff;
-            border:1px solid red;
-        }
-        div p{
-            width:50%;
-            height:50%;
-            background-color: green;
+            display: block;
+            margin: auto;
+            color: red;
         }
     </style>
 </head>
 <body>
     <div>
-        <p></p>
+        <p>hello world my name is goudan</p>
     </div>
+    <p>6666666666666</p>
+    <p>1111111111</p>
+    <p>2222222222</p>
+    <p>333333333</p>
         <!--
             1、border样式：
                 实线   solid
@@ -37,10 +36,38 @@
                 点线   dotted(有兼容性问题,在 IE6 下，1px 宽的 dotted 表现的和 dashed 一样)
                 双线   double
 
-            2、border应用，可以做三角形
+            2、border应用，可以做三角形,去掉盒子宽高，变透明。raga和transparent。
 
             3、使用margin布局时，要注意外边距合并的问题。外边距合并只会发生在普通的文档流中，在浮动、定位和行内框，不会发生外边距合并的情况。
 
+            4、图片alt属性用于SEO，title属性用于给用户提示。
+
+            5、a标签除了常用的网址，还可以写文件地址用于下载，还可以写便签的ID名，用做锚点。
+                a标签还拥有targe属性，_self，在自身窗口跳转，_target打开新窗口。
+
+            6、行内标签特征： 支持水平margin，不支持上下margin。
+                            支持水平padding，上下用padding只对自身有效（诡异）。
+                            因为不能自定义宽高，所有不用使用margin：auto水平居中。请使用text-align。
+                            空格和回车会被解析。
+               inline-block:不支持margin:auto.
+                            空格和回车会被解析。
+                            不兼容IE6 7。
+
+            7、HTML明明规范：必须以英文字母开头，可以包含- _ 数字。语义化！
+
+            8、 background-position属性值可以按X Y轴进行记忆。
+                background-size如果设置为百分比，是按父元素的宽高进行计算。
+                background复合样式：background：color url repeat position/size
+
+            9、 字体：单位用%，是根据父级字体大小而定。
+                     单位用em，1em等于父级字体大小。
+                     单位用rem，是根据HTML字体大小而定。
+
+            10、文本大小写   text-transform: uppercase大写  lowercase小写   capitalize首字母大写
+                text-align：justify   两端对齐。
+                white-space：定义换行方式    nowrap不换行，直到遇到br标签    normal正常
+                word-break：break-all   强制换行。
+                文字超出显示省略号    {text-overfolw:ellipsis  white-space:nowrap  overflow:hidden}
 
         -->
 
