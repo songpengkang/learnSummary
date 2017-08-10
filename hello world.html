@@ -8,68 +8,180 @@
     <style>
         *{
             margin: 0;
-            background-color: #fff;
         }
-        html,body{
-            height:100%;
+        body{
+            height: 3000px;
         }
-        div + P{
-            background-color: #0effff;
-            display: block;
-            margin: auto;
-            color: red;
+        div{
+            width:400px;
+            height: 400px;
+            background:url("images/2.jpg") no-repeat;
+            /*position: relative;*/
+            /*top: 10px;*/
         }
+        #box1{
+            margin-top: 300px;
+            background-attachment: scroll;
+        }
+
     </style>
 </head>
 <body>
-    <div>
-        <p>hello world my name is goudan</p>
-    </div>
-    <p>6666666666666</p>
-    <p>1111111111</p>
-    <p>2222222222</p>
-    <p>333333333</p>
-        <!--
-            1、border样式：
-                实线   solid
-                虚线   dashed
-                点线   dotted(有兼容性问题,在 IE6 下，1px 宽的 dotted 表现的和 dashed 一样)
-                双线   double
+    <div id="box1"></div>
+    <!--<div id="box2"></div>-->
 
-            2、border应用，可以做三角形,去掉盒子宽高，变透明。raga和transparent。
 
-            3、使用margin布局时，要注意外边距合并的问题。外边距合并只会发生在普通的文档流中，在浮动、定位和行内框，不会发生外边距合并的情况。
+<!--
+    1、border样式：
+        实线   solid
+        虚线   dashed
+        点线   dotted(有兼容性问题,在 IE6 下，1px 宽的 dotted 表现的和 dashed 一样)
+        双线   double
 
-            4、图片alt属性用于SEO，title属性用于给用户提示。
+    2、border应用，可以做三角形,去掉盒子宽高，变透明。raga和transparent。
 
-            5、a标签除了常用的网址，还可以写文件地址用于下载，还可以写便签的ID名，用做锚点。
-                a标签还拥有targe属性，_self，在自身窗口跳转，_target打开新窗口。
+    3、使用margin布局时，要注意外边距合并的问题。外边距合并只会发生在普通的文档流中，在浮动、定位和行内框，不会发生外边距合并的情况。
 
-            6、行内标签特征： 支持水平margin，不支持上下margin。
-                            支持水平padding，上下用padding只对自身有效（诡异）。
-                            因为不能自定义宽高，所有不用使用margin：auto水平居中。请使用text-align。
-                            空格和回车会被解析。
-               inline-block:不支持margin:auto.
-                            空格和回车会被解析。
-                            不兼容IE6 7。
+    4、图片alt属性用于SEO，title属性用于给用户提示。
 
-            7、HTML明明规范：必须以英文字母开头，可以包含- _ 数字。语义化！
+    5、a标签除了常用的网址，还可以写文件地址用于下载，还可以写便签的ID名，用做锚点。
+        a标签还拥有targe属性，_self，在自身窗口跳转，_target打开新窗口。
+        a标签伪类4种状态。a:link 未被点击
+                        a:visited 已经被激活
+                        a:hover  鼠标移动上之后
+                        a:active  鼠标点击的时候
 
-            8、 background-position属性值可以按X Y轴进行记忆。
-                background-size如果设置为百分比，是按父元素的宽高进行计算。
-                background复合样式：background：color url repeat position/size
+    6、行内标签特征： 支持水平margin，不支持上下margin。
+                    支持水平padding，上下用padding只对自身有效（诡异）。
+                    因为不能自定义宽高，所有不用使用margin：auto水平居中。请使用text-align。
+                    空格和回车会被解析。
+       inline-block:不支持margin:auto.
+                    空格和回车会被解析。
+                    不兼容IE6 7。
 
-            9、 字体：单位用%，是根据父级字体大小而定。
-                     单位用em，1em等于父级字体大小。
-                     单位用rem，是根据HTML字体大小而定。
+    7、HTML明明规范：必须以英文字母开头，可以包含- _ 数字。语义化！
 
-            10、文本大小写   text-transform: uppercase大写  lowercase小写   capitalize首字母大写
-                text-align：justify   两端对齐。
-                white-space：定义换行方式    nowrap不换行，直到遇到br标签    normal正常
-                word-break：break-all   强制换行。
-                文字超出显示省略号    {text-overfolw:ellipsis  white-space:nowrap  overflow:hidden}
+    8、 background-position属性值可以按X Y轴进行记忆。
+        background-size如果设置为百分比，是按父元素的宽高进行计算。
+        background复合样式：background：color url repeat position/size
+        background-attachment:fix scroll   背景固定和滚动
 
-        -->
+    9、 字体：单位用%，是根据父级字体大小而定。
+             单位用em，1em等于父级字体大小。
+             单位用rem，是根据HTML字体大小而定。
+
+    10、文本大小写   text-transform: uppercase大写  lowercase小写   capitalize首字母大写
+        text-align：justify   两端对齐。
+        white-space：定义换行方式    nowrap不换行，直到遇到br标签    normal正常
+        word-break：break-all   强制换行。
+        文字超出显示省略号    {text-overfolw:ellipsis  white-space:nowrap  overflow:hidden}
+
+    11、选择器：
+                E > F，使用子代选择器，只能选择儿子级别，不能选中孙子级别。
+                E + F，毗邻兄弟选择器，只能选择紧随E元素之后的同级别的F元素（只能选择一个）。
+                [id=val][class] 属性选择器。
+                [id~=val] 选择所有ID属性包含val的元素。
+                [att|=val]		匹配所有att属性以val-' 开头的(可以有多个值) 或等于“val”的元素（比如说zh-cn）
+                E:befor/after{content:'string'}   伪元素选择器
+
+    12、box-shadow:水平偏移量 垂直偏移量 模糊半径 阴影大小 阴影颜色 inset(阴影向内)
+
+    13、
+			float 的特征
+
+				A：	块级能一排展示
+				B:	内联标签支持宽高
+				C:	支持margin (margin:auto失效)
+				D:	支持padding
+				E:	默认内容撑开宽度
+				F:	脱离文档流
+				G:	提出层级（半层）
+
+    14、清除浮动的办法
+            父级：
+					A： 加高			---拓展性不好
+					B:  inline-block	----破坏margin:auto
+					C:	overflow	    ----拓展性不好
+					D:	after伪类，元素内部末尾添加内容	(时下主流)
+						:after{content:'';display:block;clear:both;}
+
+    15、定位：
+
+            relative：
+					A、不会脱离文档流
+					B、不影响元素本身的特性；
+					C、如果没有定位偏移量，对元素本身没有任何影响；
+            absolute：
+					A、使元素完全脱离文档流；
+					B、使内嵌支持宽高；
+					C、块属性标签内容撑开宽度；
+					D、没有定位父级则相对于body(整个文档)发生偏移；
+					E、绝对定位一般配合相对定位使用；
+					F。不支持margin:auto;
+    16、vertical-align垂直对齐方式
+					baseline(基线)	元素放置在父元素的基线上
+					top				元素的顶端与行中最高元素的顶端对齐
+					middle			此元素放置在父元素的中部
+					bottom			元素的顶端与行中最低的元素的底端对齐
+						（与line-height相关）
+
+    17、form表单 块级标签
+			action	属性规定数据提交地址
+			method  属性规定提交方式
+                    post
+                    get
+			target 数据提交后网页打开方式
+			name   给表单命名
+
+        input类型：
+            text、password、radio（单选）（name一组实现单选，label点击文字<label for="a">……</label> for属性应当关联元素的id）、submit
+            reset重置、button、image（图片按钮，会提交数据，有一个src='路径'定义图片路径）、file（上传文件）、hidden（隐藏,一般用来储存临时性数据）
+            select（配合option使用，selected 表示默认选中）
+
+            checkbox（多选）
+                disabled(禁用）、checked(默认选中)、
+
+        textarea 	 文本域
+            rows  	属性定义 高度
+            cols   	属性定义 宽度
+            resize 	调整尺寸样式属性（css3）
+                none		禁止调整
+                vertical		可调整高度
+                horizontal	可调整宽度
+
+        <fieldset> 	可将表单内的相关元素分组
+        <legend> 	标签为 fieldset 元素定义标题。
+
+     18、table特征：块级标签
+
+            1.table决定了整个的宽度
+            2.当一行单元格的宽度之和大于了table设置的宽度，那么单元格的宽度会转化成百分比
+            3.th,td没有margin
+            4.th文字默认加粗，垂直居中,水平居中,
+            5.td垂直居中,水平居左
+            6.默认单元格会平分表单的宽度
+            7.表单默认内容撑开宽度
+            8.同一列继承最大宽度，同一行继承最大高度
+
+            rowspan纵向合并   colspan横向合并
+
+     19、网站logo
+            <link rel="shortcut icon" href="images/mxcpfavicon.ico"  type="image/x-icon">
+
+     20、iframe 属性：
+			width		宽度
+			height		高度
+			frameborder 边框
+				0 没有边框
+				1 有边框
+
+			src 定义要显示文档的路径
+
+
+
+
+
+-->
 
 </body>
 </html>
