@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5 and CSS3</title>
+    <style>
+
+        /*
+
+          针对的浏览器版本
+            <!--[if lt IE 7]> 内容 <![endif]-->
+                IE7 以下版本	（小于IE7）
+
+            <!--[if lte IE 7]>内容<![endif]-->
+                IE7及以下版本	（包含IE7）
+
+            <!--[if gt IE 7]>内容<![endif]-->
+                IE7 以上版本	（大于IE7）
+
+            <!--[if gte IE 7]>内容<![endif]-->
+                IE7及以上版本		（包含IE7）
+
+            <!--[if !IE 7]>内容<![endif]-->
+                非IE7版本
+
+            <!--[if !IE]><!--><!--<![endif]-->
+            非IE版本
+
+
+        */
+    </style>
+</head>
+<body>
+    <!--
+    1、H5新标签
+            header    网页头部
+            nav       导航
+            main      主体部分
+            section   模块
+            aside     侧边栏
+            article   文章栏目
+            footer    页脚
+            hgroup    标题组
+            figure    图形组
+            time      时间
+            input > datalist >option
+
+            <details>  details 描述
+            <summary>潭州教育</summary>  要描述的对象
+            <p>潭州教育是一家国内知名的IT培训公司</p>
+            </details>
+
+            dialog    对话
+            address   地址
+            mark      标记
+
+            <meter min='0' max='100' low='30' high='70'value='90'></meter>
+                                                                min	 最小值
+                                                                max  最大值
+                                                                low  低值
+                                                                high 高值
+            <progress max='100' value='50'>
+
+    2、CSS3新选择器
+            [class *='o']       匹配包含o的类
+            [class ^='xxb']     匹配以xxb开头的类
+            [href $='jpg']      $=匹配以什么结尾
+            p:nth-last-child(2) 倒数第二个
+            E:nth-of-type(n)  		表示E父级中的第n个字节点，（需E选择器能选中此元素,且区分标签类型）
+			E:nth-last-of-type(n)   倒数
+			E:nth-child(odd)		匹配奇数行
+			E:nth-child(even)		匹配偶数行
+            E:empty                 匹配内容是空的元素。
+            E:target
+            p:not(.text)
+            e:selection
+
+    3、过程动画
+            transition
+                property    属性
+                duration    过度时间
+                delay       延迟时间
+                timing-function     linear 匀速   ease    逐渐变慢    ease-in ease-out ease-in-out
+
+            animation
+                name
+                duration
+                delay
+                timing-function
+                iteration-count:infinite无限次;
+                direction方向             reverse：			反方向运行
+                                          alternate：		动画先正后反方向运行
+                                          alternate-reverse：	先反后正方向运行
+                play-state运动状态   running运动  pause暂停
+                必须配置keyframes abc {}使用
+
+    4、渐变
+            线性渐变：
+                linear-gradient(角度 颜色 位置，颜色 位置)
+            径向渐变：
+			    radial-gradient(形状 半径大小 半径大小 at 圆心X坐标 圆心Y坐标,颜色 位置,颜色 位置)
+			背景裁剪：background-clip
+
+    5、弹性盒子
+            display:flex; 设置弹性盒子容器
+			display:inline-flex; 设置内联弹性盒子容器
+
+            flex-direction   盒子方向
+				row(默认)		横排
+				row-reverse		反向横排
+				column			竖排
+				column-reverse	反向竖排
+			flex-wrap	 要不要换行
+				nowrap默认         不换行(一行)
+				wrap				换行
+				wrap-reverse        换行后 第一行成第二行
+            flex-flow:flex-direction flex-wrap;
+
+            justify-content 主轴项目对齐方式
+				flex-start		 主轴开始(默认)
+				flex-end	     主轴结束
+				center			 主轴居中
+				space-between    两端对齐
+				space-around     每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+
+			align-items 交叉轴单行对齐方式
+				flex-start		 交叉轴开始
+				flex-end	     交叉轴结束
+				center
+				baseline		项目的第一行文字的基线对齐。
+				stretch（默认值）：如果项目未设置宽高或设为auto，将沿交叉轴占满整个容器的高度或宽度。
+
+	6、移动端
+	        <meta name='viewport' content='width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'>
+            device-width 设备宽度
+            device-height 设备高度
+            initial-scale  初始缩放大小
+            minimun-scale  最小缩放比例
+            maximum-scale  最大缩放比例
+            user-scalable  是否允许用户缩放
+                1  允许缩放(yes)
+                0  不允许缩放(no)
+
+
+
+
+
+
+
+
+
+    -->
+
+
+
+
+
+</body>
+</html>
